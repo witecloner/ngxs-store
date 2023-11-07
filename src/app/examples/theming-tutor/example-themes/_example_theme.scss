@@ -1,0 +1,48 @@
+@use 'sass:map';
+@use '@angular/material' as mat;
+
+/**
+  * Some vs code editor cannot redirect to scss file to lookup
+    function or method of scss file contained. Solved it with
+    using import, like i.e :
+    @import '../../../../../node_modules/@angular/material/theming';
+
+  * Just call 1 time to using angular material scss function of
+    all-component-themes to setup theme, like :
+    @include mat.all-component-themes($light-theme);
+    and for other call using :
+    @include mat.all-component-colors($dark-theme);
+    to avoid duplicated called style warning.
+
+  * There's 2 method can be used to call separated component's scss file.
+  ** first using @use to declare variable for component's scss file .
+  @use '../theming-tutor.component.scss-theme.scss' as exam;
+  and for using style like :
+  @include exam.example-tutorial-theme($light-theme);
+
+  ** second using @import to import component's scss file.
+  @import '../theming-tutor.component.scss-theme.scss';
+  and for using style like :
+  @include example-tutorial-theme($light-theme);
+**/
+
+@import './dark-theme.scss';
+@import './light-theme.scss';
+@import './orange-theme.scss';
+
+@import '../theming-tutor.component.scss-theme.scss';
+
+.light-theme {
+  @include mat.all-component-themes($light-theme);
+  @include example-tutorial-theme($light-theme);
+}
+
+.dark-theme {
+  @include mat.all-component-colors($dark-theme);
+  @include example-tutorial-theme($dark-theme);
+}
+
+.orange-theme {
+  @include mat.all-component-colors($orange-theme);
+  @include example-tutorial-theme($orange-theme);
+}

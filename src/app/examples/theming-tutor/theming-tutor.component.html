@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="d-flex justify-content-center">
+    <button class="light-button"(click)="changeThemes('light')">Light Theme</button>
+    <button class="dark-button"(click)="changeThemes('dark')">Dark Theme</button>
+    <button class="orange-button"(click)="changeThemes('orange')">Orange Theme</button>
+  </div>
+</div>
+<div class="mt-3 p-5">
+  <h1>Apply theme for material element</h1>
+  <mat-toolbar color="primary">
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+    <span class="example-spacer"></span>
+    <button mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button mat-icon-button class="example-icon" aria-label="Example icon-button with share icon">
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</div>
+<div class="mt-3 p-5">
+  <h1>Apply theme for non material element</h1>
+  <div class="card custom-card">
+    <div class="card-body">
+      <h5 class="card-title">Card title</h5>
+      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+      <a href="#" class="btn btn-primary">Go somewhere</a>
+    </div>
+  </div>
+</div>

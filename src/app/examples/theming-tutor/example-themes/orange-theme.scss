@@ -1,0 +1,13 @@
+$orange-primary: mat.define-palette(mat.$orange-palette);
+$orange-accent: mat.define-palette(mat.$red-palette);
+$orange-warn: mat.define-palette(mat.$teal-palette);
+
+$orange-theme: mat.define-dark-theme((
+  color:(
+    primary: $orange-primary,
+    accent: $orange-accent,
+    warn: $orange-warn
+  ),
+  //typography: mat.define-typography-config(),
+  //density: 0
+))

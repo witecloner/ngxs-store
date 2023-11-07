@@ -8,10 +8,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from './shared/shared.module';
+import { ThemingTutorComponent } from './examples/theming-tutor/theming-tutor.component';
 
 @NgModule({
   declarations: [
     AppComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -22,8 +24,11 @@ import { SharedModule } from './shared/shared.module';
 
     SharedModule,
 
+    // example theming tutorial
+    ThemingTutorComponent,
+
   ],
-  providers: [],
+  providers: [ ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
