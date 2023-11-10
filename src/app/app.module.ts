@@ -9,11 +9,13 @@ import { FormsModule } from '@angular/forms';
 
 import { SharedModule } from './shared/shared.module';
 import { ThemingTutorComponent } from './examples/theming-tutor/theming-tutor.component';
+import { LayoutModule } from './layout/layout.module';
+import { FolderStructureComponent } from './examples/folder-structure/folder-structure.component';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-
   ],
   imports: [
     BrowserModule,
@@ -22,10 +24,15 @@ import { ThemingTutorComponent } from './examples/theming-tutor/theming-tutor.co
     BrowserAnimationsModule,
     FormsModule,
 
+    //
     SharedModule,
 
     // example theming tutorial
     ThemingTutorComponent,
+    FolderStructureComponent,
+
+    // Layout Module
+    LayoutModule
 
   ],
   providers: [ ],

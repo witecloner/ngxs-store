@@ -6,7 +6,9 @@ $orange-theme: mat.define-dark-theme((
   color:(
     primary: $orange-primary,
     accent: $orange-accent,
-    warn: $orange-warn
+    warn: $orange-warn,
+    typography: mat.define-typography-config(),
+    density: 0
   ),
   //typography: mat.define-typography-config(),
   //density: 0

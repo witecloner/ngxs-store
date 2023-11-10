@@ -20,7 +20,7 @@
     color: #fff;
   }
   .card.custom-card {
-    background-color: mat.get-color-from-palette($primary-palette, 800 ); //$card-background-primary;
+    background-color: mat.get-color-from-palette($primary-palette, 800); //$card-background-primary;
     color: mat.get-color-from-palette($primary-palette, 100);//$card-text-primary;
   }
 }

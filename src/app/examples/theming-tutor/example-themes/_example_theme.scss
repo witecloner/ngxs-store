@@ -26,23 +26,32 @@
   @include example-tutorial-theme($light-theme);
 **/
 
-@import './dark-theme.scss';
-@import './light-theme.scss';
-@import './orange-theme.scss';
+@import '../example-themes/dark-theme.scss';
+@import '../example-themes/light-theme.scss';
+@import '../example-themes/orange-theme.scss';
 
 @import '../theming-tutor.component.scss-theme.scss';
 
 .light-theme {
   @include mat.all-component-themes($light-theme);
   @include example-tutorial-theme($light-theme);
+  $color-config: mat.get-color-config($light-theme);
+  $primary-palette: map.get($color-config, 'primary');
+  background: mat.get-color-from-palette($primary-palette, 50);
 }
 
 .dark-theme {
   @include mat.all-component-colors($dark-theme);
   @include example-tutorial-theme($dark-theme);
+  $color-config: mat.get-color-config($dark-theme);
+  $primary-palette: map.get($color-config, 'primary');
+  background: mat.get-color-from-palette($primary-palette, 100);
 }
 
 .orange-theme {
   @include mat.all-component-colors($orange-theme);
   @include example-tutorial-theme($orange-theme);
+  $color-config: mat.get-color-config($orange-theme);
+  $primary-palette: map.get($color-config, 'primary');
+  background: mat.get-color-from-palette($primary-palette, 100);
 }
